@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Wankul Game Arcade</title>
+</head>
+<body>
+    <!-- Écran de début -->
+    <div id="startScreen">
+        <h1 id="title">Bienvenue dans le Wankul Game Arcade !</h1>
+        <p id="p-title">Voici les règles du jeu :</p>
+        <ul>
+            <li>Devinez le nom de la carte affichée.</li>
+            <li>Vous avez 4 chances par cartes. Vous perdez 1 vie si vous échouez 4 fois.</li>
+            <li>Vous avez un maximum de 3 vies.</li>
+            <li>Chaque mauvaise réponse diminue le flou sur la carte.</li>
+            <li>Bonne chance !</li>
+        </ul>
+        <button id="startButton">Commencer</button>
+    </div>
+
+    
+    <div id="gameContent">
+        <div id="right-container">
+            <h1>Wankul Game Arcade</h1>
+            <div id="imageContainer">
+                <img id="randomImage" src="" alt="Image aléatoire">
+            </div>
+            <div id="inputContainer">
+                <input type="text" id="userGuess" placeholder="Entrez votre proposition" autocomplete="off">
+                <button id="checkButton">Vérifier</button>
+            </div>
+            <div class="bouffon" id="laink"></div>
+            <div class="bouffon" id="terracid"></div>
+        </div>
+        
+        <div id="left-container">
+            <h3 id="livesDisplay">Vies restantes : 3</h3> <!-- Affichage des vies restantes -->
+            <h3 id="scoreDisplay">Score : 0</h3> <!-- Affichage du score -->
+        </div>
+
+        <div id="gameOverScreen" class="hidden">
+            <div id="blurBackground"></div>
+            <h1 id="finalScore">Votre score final : 0</h1>
+            <button id="restartButton">Recommencer</button>
+        </div> 
+    </div>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
